@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="兴趣," />
 
 
 
@@ -79,12 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="xingzhong&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="题目描述给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。 说明：解集不能包含重复的子集。  输入: nums &#x3D; [1,2,3]输出:[[3],[1],[2],[1,2,3],[1,3], [2,3],[1,2],[]]  特别注意，此题是求解字节，并不是求全排列，要区分跟全排列的区别，所示这个地方在处理起点的时候要特别注意一下，而且，子集合是包含空集的，所以在一定程度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode 78 子集问题">
+<meta property="og:url" content="http://yoursite.com/2020/06/12/subgroup/index.html">
 <meta property="og:site_name" content="xingzhong&#39;s Blog">
+<meta property="og:description" content="题目描述给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。 说明：解集不能包含重复的子集。  输入: nums &#x3D; [1,2,3]输出:[[3],[1],[2],[1,2,3],[1,3], [2,3],[1,2],[]]  特别注意，此题是求解字节，并不是求全排列，要区分跟全排列的区别，所示这个地方在处理起点的时候要特别注意一下，而且，子集合是包含空集的，所以在一定程度">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-12T09:10:46.000Z">
+<meta property="article:modified_time" content="2020-09-21T12:33:59.552Z">
 <meta property="article:author" content="xingzhong zhao">
+<meta property="article:tag" content="兴趣">
 <meta name="twitter:card" content="summary">
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/12/subgroup/"/>
 
 
 
 
 
-  <title>xingzhong's Blog</title>
+  <title>leetcode 78 子集问题 | xingzhong's Blog</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,155 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/21/%E5%9C%A8%E8%BF%99%E9%87%8C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xingzhong zhao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xingzhong's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/21/%E5%9C%A8%E8%BF%99%E9%87%8C/" itemprop="url">左叶子之和</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-21T19:04:10+08:00">
-                2020-09-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" itemprop="url" rel="index">
-                    <span itemprop="name">每日一题</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>对应的核心代码如下所示，同时主要理解思路就是，先判断是不是叶子节点，判断方法为叶子节点是没有子节点的，所以说这个地方，只需要判断该节点的是否有叶子节点即可。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/09/21/%E5%9C%A8%E8%BF%99%E9%87%8C/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -422,9 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/12/subgroup/" itemprop="url">leetcode 78 子集问题</a></h1>
+          <h1 class="post-title" itemprop="name headline">leetcode 78 子集问题</h1>
         
 
         <div class="post-meta">
@@ -496,21 +352,23 @@
       
 
       
-        
-          <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。</p>
+        <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。</p>
 <p>说明：解集不能包含<b>重复的子集</b>。</p>
 <blockquote>
 <p>输入: nums = [1,2,3]<br>输出:<br>[[3],[1],[2],[1,2,3],[1,3], [2,3],[1,2],[]]</p>
 </blockquote>
 <p>特别注意，此题是求解字节，并不是求全排列，要区分跟全排列的区别，所示这个地方在处理起点的时候要特别注意一下，而且，子集合是包含空集的，所以在一定程度上是不需要return的。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/06/12/subgroup/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<a id="more"></a>
+<h3 id="主要思路"><a href="#主要思路" class="headerlink" title="主要思路"></a>主要思路</h3><p>该题的主要思路还是延续基于DFS的回溯的方法，来进行求解，顾先回顾下。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">backtracking() &#123;</span><br><span class="line">    <span class="keyword">if</span> (终止条件) &#123;</span><br><span class="line">        进行存放数据或者直接输出（Do sth）;</span><br><span class="line">    &#125;</span><br><span class="line"> # PB[] state（可以进行选择，判断节点是否用到过）</span><br><span class="line">    <span class="keyword">for</span> (选择：选择列表（树中节点的数量）) &#123;</span><br><span class="line">        递归，处理节点;</span><br><span class="line">        backtracking();</span><br><span class="line">        回溯，恢复现场</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>故按这个套路来求解，所以首先确定递归的终止条件，一般的时候是开始的下标大于等于节点的数目的时候进行终止，但是在该题目中，是取子集，遍历整棵树，不需要进行剪枝，故整个代码是不需要终止条件的，所以上述代码中的</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)  # 这一步可以忽略了</span><br></pre></td></tr></table></figure>
+<p>下面就是核心代码，也就是递归回溯的那一部门，首先 <code>vector&lt;int&gt; path</code> 来存储每一步回溯子集结果，然后<code>vector&lt;vector&lt;int&gt;&gt; result</code> 来吧子集的结果都存储下来，特别注意，因为子集是无序的，所以所以for循环要从startIndex开始,而不是从0开始，故明确这几点后，开始写for循环以及递归的核心</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=startIndex;i&lt;num.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">  path.push_back(num[i]); <span class="comment">//将该节点加入到子集中</span></span><br><span class="line">  backtracking(nums,i+<span class="number">1</span>);<span class="comment">//递归进入下一层</span></span><br><span class="line">  path.pop_back(); <span class="comment">// 将该节点弹出，恢复现场</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后再写好之后，就每次递归调用的时候，把终止条件的地方改成<code>result.push_back(path)</code> 即可。<br>所有的代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; path;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">backtracking</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> startIndex)</span> </span>&#123;</span><br><span class="line">        result.push_back(path);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = startIndex; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">            path.push_back(nums[i]);</span><br><span class="line">            backtracking(nums, i + <span class="number">1</span>);</span><br><span class="line">            path.pop_back();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; <span class="title">subsets</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        result.<span class="built_in">clear</span>(); <span class="comment">//清空vector</span></span><br><span class="line">        path.<span class="built_in">clear</span>();</span><br><span class="line">        backtracking(nums, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>解答参考：<url><a href="https://leetcode-cn.com/problems/subsets/solution/78-zi-ji-hui-su-sou-suo-fa-jing-dian-ti-mu-xiang-2/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/subsets/solution/78-zi-ji-hui-su-sou-suo-fa-jing-dian-ti-mu-xiang-2/</a></url></p>
+
       
     </div>
     
@@ -525,14 +383,36 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%85%B4%E8%B6%A3/" rel="tag"># 兴趣</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/09/21/%E5%9C%A8%E8%BF%99%E9%87%8C/" rel="prev" title="左叶子之和">
+                左叶子之和 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -542,10 +422,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -553,6 +434,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -573,8 +458,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -634,6 +528,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目描述"><span class="nav-number">1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主要思路"><span class="nav-number">2.</span> <span class="nav-text">主要思路</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -774,6 +684,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
