@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="兴趣," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本文主要是来回顾下约瑟夫问题什么是约瑟夫问题  约瑟夫环（约瑟夫问题）是一个数学的应用问题：已知 n 个人（以编号1，2，3…n分别表示）围坐在一张圆桌周围。从编号为 k 的人开始报数，数到 m 的那个人出圈；他的下一个人又从 1 开始报数，数到 m 的那个人又出圈；依此规律重复下去，直到剩余最后一个胜利者。  在算法题里面主要是有两种，第一是是直接输出剩余的最后一个胜利者，第二是按顺序输出出圈人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Joseph problem">
+<meta property="og:url" content="http://yoursite.com/2020/10/18/Joseph-problem/index.html">
+<meta property="og:site_name" content="xingzhong&#39;s Blog">
+<meta property="og:description" content="本文主要是来回顾下约瑟夫问题什么是约瑟夫问题  约瑟夫环（约瑟夫问题）是一个数学的应用问题：已知 n 个人（以编号1，2，3…n分别表示）围坐在一张圆桌周围。从编号为 k 的人开始报数，数到 m 的那个人出圈；他的下一个人又从 1 开始报数，数到 m 的那个人又出圈；依此规律重复下去，直到剩余最后一个胜利者。  在算法题里面主要是有两种，第一是是直接输出剩余的最后一个胜利者，第二是按顺序输出出圈人">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-10-18T06:30:14.000Z">
+<meta property="article:modified_time" content="2020-10-18T08:10:54.148Z">
+<meta property="article:author" content="xingzhong zhao">
+<meta property="article:tag" content="兴趣">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/10/18/Joseph-problem/"/>
+
+
+
+
+
+  <title>Joseph problem | xingzhong's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xingzhong's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/18/Joseph-problem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xingzhong zhao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xingzhong's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Joseph problem</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-18T14:30:14+08:00">
+                2020-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" itemprop="url" rel="index">
+                    <span itemprop="name">每日一题</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="本文主要是来回顾下约瑟夫问题"><a href="#本文主要是来回顾下约瑟夫问题" class="headerlink" title="本文主要是来回顾下约瑟夫问题"></a>本文主要是来回顾下约瑟夫问题</h2><h3 id="什么是约瑟夫问题"><a href="#什么是约瑟夫问题" class="headerlink" title="什么是约瑟夫问题"></a>什么是约瑟夫问题</h3><blockquote>
+<p> 约瑟夫环（约瑟夫问题）是一个数学的应用问题：已知 n 个人（以编号1，2，3…n分别表示）围坐在一张圆桌周围。从编号为 k 的人开始报数，数到 m 的那个人出圈；他的下一个人又从 1 开始报数，数到 m 的那个人又出圈；依此规律重复下去，直到剩余最后一个胜利者。</p>
+</blockquote>
+<p>在算法题里面主要是有两种，第一是是直接输出剩余的最后一个胜利者，第二是按顺序输出出圈人的index.</p>
+<h3 id="首先，典型的约瑟夫问题如下"><a href="#首先，典型的约瑟夫问题如下" class="headerlink" title="首先，典型的约瑟夫问题如下"></a>首先，典型的约瑟夫问题如下</h3><ul>
+<li>题目描述：n 个人围成一圈，从第一个人开始报数,数到 mm 的人出列，再由下一个人重新从 11 开始报数，数到 mm 的人再出圈，依次类推，直到所有的人都出圈，请输出依次出圈人的编号</li>
+<li>输入：输入两个整数 n,mn,m</li>
+<li>输出： 输出一行 nn 个整数，按顺序输出每个出圈人的编号</li>
+<li>样例: 输入： 10 3 输出：3 6 9 2 7 1 8 5 10 4</li>
+</ul>
+<p><b>代码如下</b></p>
+<h4 id="暴力解法-直接模拟的方法"><a href="#暴力解法-直接模拟的方法" class="headerlink" title="暴力解法- 直接模拟的方法"></a>暴力解法- 直接模拟的方法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">100</span>;</span><br><span class="line"><span class="keyword">bool</span> st[N];</span><br><span class="line"><span class="comment">//Simulate this process n</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">int</span> p=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> k;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,r=n;i&lt;=n;i++,r--) <span class="comment">// 每次循环一圈。循环一圈，总的数量减一</span></span><br><span class="line">    &#123;</span><br><span class="line">        k=m;<span class="comment">//每次循环删除m的人，同时这个地方可以存在存在变种</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!st[p]) &#123;</span><br><span class="line">                k--;</span><br><span class="line">                <span class="keyword">if</span> (!k) &#123;</span><br><span class="line">                    st[p] = <span class="literal">true</span>;<span class="comment">// 每一次设置剔除的标号为m的人</span></span><br><span class="line">                    <span class="built_in">cout</span>&lt;&lt;p&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            p++;</span><br><span class="line">            <span class="keyword">if</span> (p &gt; n) p = <span class="number">1</span>;<span class="comment">// 如果p大于最大数，则重新从头开始查找</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//#cout&lt;&lt;p&lt;&lt;endl;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上式子中，while的条件地方可以直接有for来优化，可以写成下面这样</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m,s=<span class="number">0</span>;<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);<span class="comment">//入读</span></span><br><span class="line">    <span class="keyword">bool</span> visit[<span class="number">200</span>]=&#123;<span class="number">0</span>&#125;;<span class="comment">//visit赋初始值</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k++)&#123;<span class="comment">//总共要出队n次</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;m;i++)&#123;<span class="keyword">if</span>(++s&gt;n)s=<span class="number">1</span>;<span class="keyword">if</span>(visit[s])i--;&#125;<span class="comment">//类似取模，而因为序列是从1开始的，所以不取模，加判断；若visit过，则i--，使其继续循环</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,s);visit[s]=<span class="literal">true</span>;<span class="comment">//输出，记录已出队</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此外如果只是需要输出最后的胜利者，则这个地方其实是可以用dp来解的，代码如下，主要的解释在代码中</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//N个人坐成一个圆环（编号为1 - N），从第1个人开始报数，数到K的人出列，后面的人重新从1开始报数。问最后剩下的人的编号。</span></span><br><span class="line"><span class="comment">//例如：N = 3，K = 2。2号先出列，然后是1号，最后剩下的是3号。</span></span><br><span class="line"><span class="comment">//这种情况下不需要考虑谁先死，故可以转化为递归问题，f(n)=(f(n-1)+k)%i,其中k，代表着每次都是从k的地方开始，同时n，代表遍历几次，故把问题转化为n-1，n-2,...1阶的问题</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,k;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;k);</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	ans=(ans+k)%i;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans+<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="输出最后一个胜利者的题目，变种题目，是paypal的一道笔试题目，描述如下"><a href="#输出最后一个胜利者的题目，变种题目，是paypal的一道笔试题目，描述如下" class="headerlink" title="输出最后一个胜利者的题目，变种题目，是paypal的一道笔试题目，描述如下"></a>输出最后一个胜利者的题目，变种题目，是paypal的一道笔试题目，描述如下</h3><h3 id="幸存者游戏"><a href="#幸存者游戏" class="headerlink" title="幸存者游戏"></a>幸存者游戏</h3><ul>
+<li><p>有n个同学围成一圈，其id依次为1~n（n号挨着1号）。<br>现在从1号开始报数，第一回合报到m的人就出局，第二回合从出局的下一个人开始报数，报到m2的同学出局。<br>以此类推，直到最后一个回合报到mn−1的人出局，剩下最后一个同学。<br>输出这个同学的编号。</p>
+</li>
+<li><p>输入格式<br>共一行，包含两个整数n和m。</p>
+</li>
+<li><p>输出格式<br>输出最后剩下的同学的编号。</p>
+</li>
+<li><p>数据范围<br>n≤15,m≤5</p>
+</li>
+<li><p>输入样例：<br>5 2</p>
+</li>
+<li><p>输出样例：<br>5</p>
+</li>
+</ul>
+<p>该题其实就是约瑟夫问题的一个变种，只是修改了m的条件，设置了什么时候才将第i个人扔掉，故代码可以直接修改上方的暴力破解的方法(因为数据范围n&lt;=15&gt;),故代码如下</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">16</span>;</span><br><span class="line"><span class="keyword">bool</span> st[N];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">int</span> p=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>,r=n;i&lt;=n;i++,r--)&#123;</span><br><span class="line">        <span class="keyword">int</span> k=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;i;j++) k=k*m%r;</span><br><span class="line">        <span class="keyword">if</span>(k==<span class="number">0</span>)k=r;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!st[p])</span><br><span class="line">            &#123;</span><br><span class="line">                k--;</span><br><span class="line">                <span class="keyword">if</span>(!k)&#123;</span><br><span class="line">                      st[p]=<span class="literal">true</span>;</span><br><span class="line">                      <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">                p++;</span><br><span class="line">                <span class="keyword">if</span>(p&gt;n)p=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;p&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%85%B4%E8%B6%A3/" rel="tag"># 兴趣</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/09/26/%E8%B7%AF%E5%BE%84%E4%B9%8B%E5%92%8C%E4%BA%8C/" rel="next" title="路径之和二">
+                <i class="fa fa-chevron-left"></i> 路径之和二
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">xingzhong zhao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本文主要是来回顾下约瑟夫问题"><span class="nav-number">1.</span> <span class="nav-text">本文主要是来回顾下约瑟夫问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是约瑟夫问题"><span class="nav-number">1.1.</span> <span class="nav-text">什么是约瑟夫问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#首先，典型的约瑟夫问题如下"><span class="nav-number">1.2.</span> <span class="nav-text">首先，典型的约瑟夫问题如下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#暴力解法-直接模拟的方法"><span class="nav-number">1.2.1.</span> <span class="nav-text">暴力解法- 直接模拟的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出最后一个胜利者的题目，变种题目，是paypal的一道笔试题目，描述如下"><span class="nav-number">1.3.</span> <span class="nav-text">输出最后一个胜利者的题目，变种题目，是paypal的一道笔试题目，描述如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#幸存者游戏"><span class="nav-number">1.4.</span> <span class="nav-text">幸存者游戏</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xingzhong</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
