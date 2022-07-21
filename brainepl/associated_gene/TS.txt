@@ -1,0 +1,56 @@
+disorder_name Tissue/Cell_name Ensembl_id Gene_SYmbol P-value
+TS Astrocyte - cerebellum   NA
+TS Astrocyte - cerebral cortex   NA
+TS Meningeal Cells   NA
+TS Neural stem cells   NA
+TS Neurons   NA
+TS Oligodendrocyte - precursors   NA
+TS amygdala, adult   NA
+TS amygdala, newborn   NA
+TS brain, adult   NA
+TS brain, fetal   NA
+TS caudate nucleus, adult   NA
+TS caudate nucleus, newborn   NA
+TS cerebellum, adult   NA
+TS cerebellum, newborn   NA
+TS cerebral meninges, adult   NA
+TS cerebrospinal fluid   NA
+TS corpus callosum, adult   NA
+TS diencephalon, adult   NA
+TS dura mater, adult   NA
+TS frontal lobe, adult   NA
+TS globus pallidus, adult   NA
+TS globus pallidus, newborn   NA
+TS hippocampus, adult   NA
+TS hippocampus, newborn   NA
+TS insula, adult   NA
+TS locus coeruleus, adult   NA
+TS locus coeruleus, newborn   NA
+TS medial frontal gyrus, adult   NA
+TS medial frontal gyrus, newborn   NA
+TS medial temporal gyrus, adult   NA
+TS medial temporal gyrus, newborn   NA
+TS medulla oblongata, adult   NA
+TS medulla oblongata, newborn   NA
+TS nucleus accumbens, adult   NA
+TS occipital cortex, adult   NA
+TS occipital cortex, newborn   NA
+TS occipital lobe, adult   NA
+TS occipital lobe, fetal   NA
+TS occipital pole, adult   NA
+TS paracentral gyrus, adult   NA
+TS parietal cortex, adult   NA
+TS parietal lobe, adult   NA
+TS parietal lobe, fetal   NA
+TS parietal lobe, newborn   NA
+TS pineal gland, adult   NA
+TS pons, adult   NA
+TS postcentral gyrus, adult   NA
+TS putamen, adult   NA
+TS putamen, newborn   NA
+TS substantia nigra, adult   NA
+TS substantia nigra, newborn   NA
+TS temporal lobe, adult   NA
+TS temporal lobe, fetal   NA
+TS thalamus, adult   NA
+TS thalamus, newborn   NA

@@ -1,0 +1,56 @@
+disorder_name Tissue/Cell_name Ensembl_id Gene_SYmbol P-value
+OCD Astrocyte - cerebellum   NA
+OCD Astrocyte - cerebral cortex   NA
+OCD Meningeal Cells   NA
+OCD Neural stem cells   NA
+OCD Neurons   NA
+OCD Oligodendrocyte - precursors   NA
+OCD amygdala, adult   NA
+OCD amygdala, newborn   NA
+OCD brain, adult   NA
+OCD brain, fetal   NA
+OCD caudate nucleus, adult   NA
+OCD caudate nucleus, newborn   NA
+OCD cerebellum, adult   NA
+OCD cerebellum, newborn   NA
+OCD cerebral meninges, adult   NA
+OCD cerebrospinal fluid   NA
+OCD corpus callosum, adult   NA
+OCD diencephalon, adult   NA
+OCD dura mater, adult   NA
+OCD frontal lobe, adult   NA
+OCD globus pallidus, adult   NA
+OCD globus pallidus, newborn   NA
+OCD hippocampus, adult   NA
+OCD hippocampus, newborn   NA
+OCD insula, adult   NA
+OCD locus coeruleus, adult   NA
+OCD locus coeruleus, newborn   NA
+OCD medial frontal gyrus, adult   NA
+OCD medial frontal gyrus, newborn   NA
+OCD medial temporal gyrus, adult   NA
+OCD medial temporal gyrus, newborn   NA
+OCD medulla oblongata, adult   NA
+OCD medulla oblongata, newborn   NA
+OCD nucleus accumbens, adult   NA
+OCD occipital cortex, adult   NA
+OCD occipital cortex, newborn   NA
+OCD occipital lobe, adult   NA
+OCD occipital lobe, fetal   NA
+OCD occipital pole, adult   NA
+OCD paracentral gyrus, adult   NA
+OCD parietal cortex, adult   NA
+OCD parietal lobe, adult   NA
+OCD parietal lobe, fetal   NA
+OCD parietal lobe, newborn   NA
+OCD pineal gland, adult   NA
+OCD pons, adult   NA
+OCD postcentral gyrus, adult   NA
+OCD putamen, adult   NA
+OCD putamen, newborn   NA
+OCD substantia nigra, adult   NA
+OCD substantia nigra, newborn   NA
+OCD temporal lobe, adult   NA
+OCD temporal lobe, fetal   NA
+OCD thalamus, adult   NA
+OCD thalamus, newborn   NA
