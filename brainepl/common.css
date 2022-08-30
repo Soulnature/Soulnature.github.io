@@ -1,0 +1,48 @@
+a:visited	{color:#224499;}
+a:link		{color:#224499;}
+a:hover		{color:#2244FF;}
+a:active	{color:#2244FF;}
+.a2:visited	{color:#EEEEFF;}
+.a2:link	{color:#EEEEFF;}
+.a2:hover	{color:#FFFFFF;}
+.a2:active	{color:#EEEEFF;}
+.a3:visited	{color:#FFFFFF; font-size:12pt; text-decoration:none;}
+.a3:link	{color:#FFFFFF; font-size:12pt; text-decoration:none;}
+.a3:hover	{color:#FFFFFF; font-size:12pt; text-decoration:none;}
+.a3:active	{color:#FFFFFF; font-size:12pt; text-decoration:none;}
+body		{font-family:arial; font-size:10pt; margin-top:0pt;}
+h1		{font-family:arial; font-size:20pt; font-weight:bold;}
+h2		{font-family:arial; font-size:18pt; font-weight:bold;}
+h3		{font-family:arial; font-size:14pt; font-style:italic;}
+h4		{font-family:Helvetica; font-size:18pt; }
+h5		{font-family:arial; font-size:10pt;}
+table		{background-color:#FFFFFF;}
+td		{font-size:10pt;}
+th		{font-size:10pt; text-align:left;}
+ul		{margin-left:5px;}
+.AdvancedClass	{color:2244FF; font-style:italic; font-weight:bold;}
+.BorderClass	{background-color:#999999;}
+.MessageClass	{color:#FF0000;}
+.PaneClass	{background-color:#CCCCFF;}
+.StatHeadClass	{font-size:9pt;font-weight:bold;}
+/*
+.DynTableClass	{overflow:auto; border-left:2px gray solid; border-right:2px gray solid; border-top:2px gray solid; border-bottom:2px gray solid; background:#ffffff; padding:0px; margin:0px;}
+*/
+.DynTableClass	{overflow:auto; border-style:none; background:#ffffff; padding:0px; margin:0px;}
+.Header1Class	{background-color:#9999FF;}
+.Header2Class	{background-color:#6666FF;}
+.Cell1Class	{background-color:#FFFFFF;}
+.Cell2Class	{background-color:#CCCCFF;}
+.Th1		{background-color:#7777FF;}
+.Th2		{background-color:#6666DD;}
+.Th3		{background-color:#7799FF;}
+.Th4		{background-color:#6688DD;}
+.Th5		{background-color:#9977FF;}
+.Th6		{background-color:#8866DD;}
+.SameResult	{color:#999999;}
+.BestResult	{font-weight:bold;}
+
+.Rank0		{color:black;}
+.Rank1		{color:red;   font-weight:bold;}
+.Rank2		{color:green; font-weight:bold;}
+.Rank3		{color:blue;  font-weight:bold;}

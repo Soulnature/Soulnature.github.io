@@ -1,0 +1,108 @@
+disorder_name Tissue/Cell_name Ensembl_id Gene_SYmbol P-value
+ALS Astrocyte - cerebellum   NA
+ALS Astrocyte - cerebral cortex ENSG00000120162.10 MOB3B 3.6629e-10
+ALS Astrocyte - cerebral cortex ENSG00000147894.17 C9orf72 3.4972e-15
+ALS Meningeal Cells ENSG00000120162.10 MOB3B 3.6629e-10
+ALS Meningeal Cells ENSG00000147894.17 C9orf72 3.4972e-15
+ALS Neural stem cells ENSG00000120162.10 MOB3B 3.6629e-10
+ALS Neural stem cells ENSG00000147894.17 C9orf72 3.4972e-15
+ALS Neurons ENSG00000120162.10 MOB3B 3.6629e-10
+ALS Neurons ENSG00000147894.17 C9orf72 3.4972e-15
+ALS Oligodendrocyte - precursors ENSG00000120162.10 MOB3B 3.6629e-10
+ALS Oligodendrocyte - precursors ENSG00000147894.17 C9orf72 3.4972e-15
+ALS amygdala, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS amygdala, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS amygdala, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS amygdala, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS brain, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS brain, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS brain, fetal ENSG00000120162.10 MOB3B 3.6629e-10
+ALS brain, fetal ENSG00000147894.17 C9orf72 3.4972e-15
+ALS caudate nucleus, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS caudate nucleus, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS caudate nucleus, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS caudate nucleus, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS cerebellum, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS cerebellum, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS cerebellum, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS cerebellum, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS cerebral meninges, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS cerebral meninges, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS cerebrospinal fluid ENSG00000120162.10 MOB3B 3.6629e-10
+ALS corpus callosum, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS corpus callosum, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS diencephalon, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS diencephalon, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS dura mater, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS dura mater, adult ENSG00000147894.17 C9orf72 5.2736e-15
+ALS frontal lobe, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS frontal lobe, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS globus pallidus, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS globus pallidus, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS globus pallidus, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS globus pallidus, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS hippocampus, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS hippocampus, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS hippocampus, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS hippocampus, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS insula, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS insula, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS locus coeruleus, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS locus coeruleus, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS locus coeruleus, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS medial frontal gyrus, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS medial frontal gyrus, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS medial frontal gyrus, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS medial frontal gyrus, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS medial temporal gyrus, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS medial temporal gyrus, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS medial temporal gyrus, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS medial temporal gyrus, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS medulla oblongata, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS medulla oblongata, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS medulla oblongata, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS medulla oblongata, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS nucleus accumbens, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS nucleus accumbens, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS occipital cortex, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS occipital cortex, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS occipital cortex, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS occipital cortex, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS occipital lobe, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS occipital lobe, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS occipital lobe, fetal ENSG00000120162.10 MOB3B 3.6629e-10
+ALS occipital lobe, fetal ENSG00000147894.17 C9orf72 3.4972e-15
+ALS occipital pole, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS occipital pole, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS paracentral gyrus, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS paracentral gyrus, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS parietal cortex, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS parietal cortex, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS parietal lobe, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS parietal lobe, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS parietal lobe, fetal ENSG00000120162.10 MOB3B 3.6629e-10
+ALS parietal lobe, fetal ENSG00000147894.17 C9orf72 3.4972e-15
+ALS parietal lobe, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS parietal lobe, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS pineal gland, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS pineal gland, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS pons, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS pons, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS postcentral gyrus, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS postcentral gyrus, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS putamen, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS putamen, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS putamen, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS putamen, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS substantia nigra, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS substantia nigra, adult ENSG00000147894.17 C9orf72 5.2736e-15
+ALS substantia nigra, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS substantia nigra, newborn ENSG00000147894.17 C9orf72 3.4972e-15
+ALS temporal lobe, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS temporal lobe, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS temporal lobe, fetal ENSG00000120162.10 MOB3B 3.6629e-10
+ALS temporal lobe, fetal ENSG00000147894.17 C9orf72 3.4972e-15
+ALS thalamus, adult ENSG00000120162.10 MOB3B 3.6629e-10
+ALS thalamus, adult ENSG00000147894.17 C9orf72 3.4972e-15
+ALS thalamus, newborn ENSG00000120162.10 MOB3B 3.6629e-10
+ALS thalamus, newborn ENSG00000147894.17 C9orf72 3.4972e-15
