@@ -149,7 +149,7 @@ p { margin: 0; }
 .about-text p + p { margin-top: 18px; color: var(--muted); font-size: 18px; }
 .facts { margin: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
 .facts div { padding: 16px 0; border-bottom: 1px solid var(--line); }
-.facts dt { font-size: 14px; color: var(--faint); }
+.facts dt { font-size: 14px; color: var(--faint); font-variant-numeric: tabular-nums; }
 .facts dd { margin: 2px 0 0; }
 .facts dd span { display: block; color: var(--muted); font-size: 15px; }
 
@@ -220,6 +220,7 @@ p { margin: 0; }
 .pub-venue span { font-style: italic; }
 .badge { font-size: 12px; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--muted); }
 .badge-first { border-color: rgba(62, 230, 160, 0.5); color: var(--ap); }
+.badge-corr { border-color: rgba(90, 168, 255, 0.5); color: var(--si); }
 .pub[hidden], .year-group[hidden] { display: none; }
 .empty { color: var(--muted); padding: 24px 0; }
 
